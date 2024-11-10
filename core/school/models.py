@@ -12,7 +12,7 @@ class Teacher(models.Model):
 
 class Student(models.Model):
     name = models.CharField(max_length=100)
-
+    grade = models.ForeignKey(Teacher, on_delete=models.DO_NOTHING)
 
 class Grade(models.Model):
     numbers = models.IntegerField()
@@ -20,4 +20,6 @@ class Grade(models.Model):
 
 
 class Schedule(models.Model):
-    ...
+    subject = models.ForeignKey(Subject, on_delete=models.CASCADE)
+    teacher = models.ForeignKey(Teacher, on_delete=models.CASCADE)
+    date = models.DateTimeField()
