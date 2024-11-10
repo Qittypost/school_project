@@ -20,3 +20,4 @@ class Grade(models.Model):
 
 
 class Schedule(models.Model):
+    ...
