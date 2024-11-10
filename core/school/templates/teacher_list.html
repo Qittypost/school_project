@@ -1,0 +1,5 @@
+{% for teacher in teachers %}
+<p>{{ teacher.name }}, {{ teacher.subject }}</p>
+{% empty %}
+<p>No teachers found</p>
+{% endfor %}
